@@ -4,665 +4,931 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
 
+    <title>H+ 后台主题UI框架 - 主页</title>
 
-    <title>H+ 后台主题UI框架 开发文档</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
 
-    <style>
-        body {
-            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
-        }
-
-        .documentation .jumbotron .row {
-            padding-top: 60px;
-        }
-
-        .anchor {
-            padding-top: 50px;
-        }
-
-        h3,
-        h4 {
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
 </head>
 
-<body class="documentation">
-
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">菜单切换</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">H+开发文档</a>
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
             </div>
-        </div>
-    </div>
-
-    <div class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>H+ 后台主题UI框架</h2>
-                    <p>非常感谢您选择和使用H+，在使用H+之前请注意以下事项：</p>
-                    <p>1.为了保证所有功能都可正常使用，请在服务器环境（本地测试可使用localhost）下运行；
-                        <br> 2.请认真阅读本文档后再开始使用H+；
-                    </p>
-                    <p>如果您觉得当前H+版本还满足不了您的实际需求，希望添加新功能，请联系QQ：516477188，非常感谢。</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="img/preview.png" alt="screen" class="img-responsive" />
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container">
-
-
-        <div class="row">
-
-            <div class="col-lg-12">
-
-                <h2>
-            内容导航
-        </h2>
-
-                <ul>
-
-                    <li><a href="#documentation">关于文档</a>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span><img alt="image" class="img-circle" src="img/profile_small.jpg" /></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
+                                <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                                </li>
+                                <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                                </li>
+                                <li><a class="J_menuItem" href="contacts.html">联系我们</a>
+                                </li>
+                                <li><a class="J_menuItem" href="mailbox.html">信箱</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">H+
+                        </div>
                     </li>
-                    <li><a href="#folder_structure">文件夹结构</a>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">主页</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="index_v1.html" data-index="0">主页示例一</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="index_v2.html">主页示例二</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="index_v3.html">主页示例三</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="index_v4.html">主页示例四</a>
+                            </li>
+                            <li>
+                                <a href="index_v5.html" target="_blank">主页示例五</a>
+                            </li>
+                        </ul>
+
                     </li>
-                    <li><a href="#layout_structure">布局结构</a>
+                    <li>
+                        <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
                     </li>
-                    <li><a href="#options">设置选项</a>
-                        <ul>
-                            <li><a href="#fixed_navbar">固定顶部导航</a>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">统计图表</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
                             </li>
-                            <li><a href="#rtl_support">RTL支持</a>
+                            <li>
+                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
                             </li>
-                            <li><a href="#layout_2">布局2</a>
+                            <li>
+                                <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
                             </li>
-                            <li><a href="#skins">模板皮肤</a>
+                            <li>
+                                <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
                             </li>
-                            <li><a href="#themeconfig">主题设置</a>
+                            <li>
+                                <a class="J_menuItem" href="graph_peity.html">Peity</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#change_log">如何从v3.x升级到v4.1.0</a>
+
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
+                            </li>
+                            <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
+                            </li>
+                            <li><a class="J_menuItem" href="mail_compose.html">写信</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li><a href="#links">相关参考文档</a>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_advanced.html">高级插件</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
+                            </li>
+                            <li>
+                                <a href="#">文件上传 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_avatar.html">头像裁剪上传</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">编辑器 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="suggest.html">搜索自动补全</a>
+                            </li>
+                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li><a href="#contact">付费二次开发服务</a>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="contacts.html">联系人</a>
+                            </li>
+                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            </li>
+                            <li>
+                                <a href="#">项目管理 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="projects.html">项目</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="project_detail.html">项目详情</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="teams_board.html">团队管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="social_feed.html">信息流</a>
+                            </li>
+                            <li><a class="J_menuItem" href="clients.html">客户管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="file_manager.html">文件管理器</a>
+                            </li>
+                            <li><a class="J_menuItem" href="calendar.html">日历</a>
+                            </li>
+                            <li>
+                                <a href="#">博客 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="blog.html">文章列表</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="article.html">文章详情</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">时间轴 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="timeline.html">时间轴</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="timeline_v2.html">时间轴v2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="pin_board.html">标签墙</a>
+                            </li>
+                            <li>
+                                <a href="#">单据 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="invoice.html">单据</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="invoice_print.html">单据打印</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="search_results.html">搜索结果</a>
+                            </li>
+                            <li><a class="J_menuItem" href="forum_main.html">论坛</a>
+                            </li>
+                            <li>
+                                <a href="#">即时通讯 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="chat_view.html">聊天窗口</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="webim.html">layIM</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">登录注册相关 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a href="login.html" target="_blank">登录页面</a>
+                                    </li>
+                                    <li><a href="login_v2.html" target="_blank">登录页面v2</a>
+                                    </li>
+                                    <li><a href="register.html" target="_blank">注册页面</a>
+                                    </li>
+                                    <li><a href="lockscreen.html" target="_blank">登录超时</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="404.html">404页面</a>
+                            </li>
+                            <li><a class="J_menuItem" href="500.html">500页面</a>
+                            </li>
+                            <li><a class="J_menuItem" href="empty_page.html">空白页</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="typography.html">排版</a>
+                            </li>
+                            <li>
+                                <a href="#">字体图标 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a class="J_menuItem" href="fontawesome.html">Font Awesome</a>
+                                    </li>
+                                    <li>
+                                        <a class="J_menuItem" href="glyphicons.html">Glyphicon</a>
+                                    </li>
+                                    <li>
+                                        <a class="J_menuItem" href="iconfont.html">阿里巴巴矢量图标库</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">拖动排序 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="draggable_panels.html">拖动面板</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="agile_board.html">任务清单</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="buttons.html">按钮</a>
+                            </li>
+                            <li><a class="J_menuItem" href="tabs_panels.html">选项卡 &amp; 面板</a>
+                            </li>
+                            <li><a class="J_menuItem" href="notifications.html">通知 &amp; 提示</a>
+                            </li>
+                            <li><a class="J_menuItem" href="badges_labels.html">徽章，标签，进度条</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="grid_options.html">栅格</a>
+                            </li>
+                            <li><a class="J_menuItem" href="plyr.html">视频、音频</a>
+                            </li>
+                            <li>
+                                <a href="#">弹框插件 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="layer.html">Web弹层组件layer</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="modal_window.html">模态窗口</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="sweetalert.html">SweetAlert</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">树形视图 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li><a class="J_menuItem" href="jstree.html">jsTree</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="tree_view.html">Bootstrap Tree View</a>
+                                    </li>
+                                    <li><a class="J_menuItem" href="nestable_list.html">nestable</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="J_menuItem" href="toastr_notifications.html">Toastr通知</a>
+                            </li>
+                            <li><a class="J_menuItem" href="diff.html">文本对比</a>
+                            </li>
+                            <li><a class="J_menuItem" href="spinners.html">加载动画</a>
+                            </li>
+                            <li><a class="J_menuItem" href="widgets.html">小部件</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
+                            </li>
+                            <li><a class="J_menuItem" href="table_data_tables.html">DataTables</a>
+                            </li>
+                            <li><a class="J_menuItem" href="table_jqgrid.html">jqGrid</a>
+                            </li>
+                            <li><a class="J_menuItem" href="table_foo_table.html">Foo Tables</a>
+                            </li>
+                            <li><a class="J_menuItem" href="table_bootstrap.html">Bootstrap Table
+                                <span class="label label-danger pull-right">推荐</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                            </li>
+                            <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                            </li>
+                            <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            </li>
+                        </ul>
                     </li>
 
                 </ul>
-
-
             </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li class="m-t-xs">
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
+                                            <br>
+                                            <small class="text-muted">3天前 2014.11.8</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">25小时前</small>
+                                            <strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
+                                            <br>
+                                            <small class="text-muted">昨天</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="J_menuItem" href="mailbox.html">
+                                            <i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                            <span class="pull-right text-muted small">4分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                            <span class="pull-right text-muted small">12分钟钱</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="J_menuItem" href="notifications.html">
+                                            <strong>查看所有 </strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 购买</a>
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a class="right-sidebar-toggle" aria-expanded="false">
+                                <i class="fa fa-tasks"></i> 主题
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
+                    </div>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span>
 
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive"><a>定位当前选项卡</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+                        </li>
+                        <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            </div>
+            <div class="footer">
+                <div class="pull-right">&copy; 2014-2015 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+                </div>
+            </div>
         </div>
+        <!--右侧部分结束-->
+        <!--右侧边栏开始-->
+        <div id="right-sidebar">
+            <div class="sidebar-container">
 
-        <div class="row">
-            <div class="col-md-12">
-                <a name="documentation" class="anchor"></a>
-                <h3>关于H+</h3>
+                <ul class="nav nav-tabs navs-3">
 
-                <p>H+是一个完全响应式，基于Bootstrap3.3.4最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术，她提供了诸多的强大的可以重新组合的UI组件，并集成了最新的jQuery版本(v2.1.1)，当然，也集成了很多功能强大，用途广泛的jQuery插件，她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA等等，当然，您也可以对她进行深度定制，以做出更强系统。</p>
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-1">
+                            <i class="fa fa-gear"></i> 主题
+                        </a>
+                    </li>
+                    <li class=""><a data-toggle="tab" href="#tab-2">
+                        通知
+                    </a>
+                    </li>
+                    <li><a data-toggle="tab" href="#tab-3">
+                        项目进度
+                    </a>
+                    </li>
+                </ul>
 
-                <div class="row">
-                    <a name="folder_structure" class="anchor"></a>
-                    <div class="col-md-6">
-                        <h3>结构</h3>
-                        <h4>文件夹和文件</h4>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-comments-o"></i> 主题设置</h3>
+                            <small><i class="fa fa-tim"></i> 你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。</small>
+                        </div>
+                        <div class="skin-setttings">
+                            <div class="title">主题设置</div>
+                            <div class="setings-item">
+                                <span>收起左侧菜单</span>
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="collapsemenu">
+                                        <label class="onoffswitch-label" for="collapsemenu">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setings-item">
+                                <span>固定顶部</span>
 
-                        <div><pre class="prettyprint linenums">
-<code>Hplus-v.3.0.1/
-    ├── <strong>css/</strong>（css文件夹，包含框架主要css及示例、插件的css文件）
-    ├── <strong>docs/</strong>（开发文档）
-    ├── <strong>fonts/</strong>（字体图标，包含FontAwesome字体图标和Bootstrap自带的Glyphicons字体图标）
-    ├── <strong>img/</strong>（图片）
-    ├── <strong>js/</strong>（js文件夹，包含框架主要的js及示例、插件的js文件）
-    ├── <strong>plugins/</strong>（存放Flash等插件）
-    ├── 404.html（404页面）
-    ├── 500.html（500页面）
-    ├── agile_board.html（任务清单）
-    ├── article.html（文章页面）
-    ├── badges_labels.html（徽章，标签，进度条）
-    ├── basic_gallery.html（基本图库）
-    ├── blog.html（文章列表）
-    ├── blueimp.html（Blueimp相册）
-    ├── buttons.html（按钮）
-    ├── calendar.html（日历）
-    ├── carousel.html（图片切换）
-    ├── chat_view.html（聊天窗口）
-    ├── clients.html（客户管理）
-    ├── code_editor.html（代码编辑器）
-    ├── contacts.html（联系人）
-    ├── css_animation.html（css动画）
-    ├── diff.html（文本对比）
-    ├── draggable_panels.html（拖动面板）
-    ├── empy_page.html（空白页面）
-    ├── faq.html（FAQ）
-    ├── file_manager.html（文件管理）
-    ├── form_advanced.html（高级表单）
-    ├── form_avatar.html（富头像上传编辑器）
-    ├── form_basic.html（基本表单）
-    ├── form_builder.html（表单构建器）
-    ├── form_editors.html（富文本编辑器）
-    ├── form_file_upload.html（文件上传）
-    ├── form_markdown.html（Markdown编辑器）
-    ├── form_simditor.html（Simditor富文本编辑器）
-    ├── form_validate.html（表单验证）
-    ├── form_webuploader.html（百度 Web Uploader）
-    ├── form_wizard.html（表单向导）
-    ├── forum_main.html（论坛）
-    ├── glyphicons.html（Glyphicons图标）
-    ├── graph_echarts.html（百度ECHarts）
-    ├── graph_flot.html（Flot图表）
-    ├── graph_metrics.html（图表组合）
-    ├── graph_morris.html（Morris.js图表）
-    ├── graph_peity.html（Peity图表）
-    ├── graph_rickshaw.html（Rickshaw图表）
-    ├── graph_sparkline.html（Sparkline图表）
-    ├── grid_options.html（栅格）
-    ├── iconfont.html（阿里巴巴矢量图标库）
-    ├── icons.html（字体图标）
-    ├── index.html（主页）
-    ├── index_v1.html（主页示例一）
-    ├── index_v2.html（主页示例二）
-    ├── index_v3.html（主页示例三）
-    ├── index_v4.html（主页示例四）
-    ├── index_v5.html（主页示例五）
-    ├── invoice.html（单据）
-    ├── invoice_print.html（单据打印）
-    ├── jstree.html（树形视图）
-    ├── layer.html（web弹层组件layer）
-    ├── layerdate.html（日期选择器layerDate）
-    ├── layerphoto.html（layer相册）
-    ├── layouts.html（布局）
-    ├── lockscreen.html（登录超时）
-    ├── login.html（登录）
-    ├── login_v2.html（登录2）
-    ├── mail_compose.html（写邮件）
-    ├── mail_detail.html（查看邮件）
-    ├── mailbox.html（收件箱）
-    ├── modal_window.html（模态窗口）
-    ├── nestable_list.html（嵌套列表）
-    ├── notifications.html（通知 &amp; 提示）
-    ├── pin_board.html（标签墙）
-    ├── plyr.html（视频、音频播放）
-    ├── profile.html（个人资料）
-    ├── project_detail.html（项目详情）
-    ├── projects.html（项目）
-    ├── register.html（注册）
-    ├── search_result.html（搜索结果）
-    ├── skin-config.html（主题设置选项）
-    ├── social_feed.html（信息流）
-    ├── spinners.html（加载动画）
-    ├── suggest.html（搜索建议）
-    ├── sweetalert.html（Sweet alert）
-    ├── table_basic.html（基础表格）
-    ├── table_data_tables.html（数据表格）
-    ├── table_foo_table.html（FooTable）
-    ├── table_jqgrid.html（jqGird）
-    ├── table_bootstrap.html（Bootstrap Table）
-    ├── tabs_panels.html（选项卡 &amp; 面板）
-    ├── teams_board.html（团队管理）
-    ├── timeline.html（时间轴）
-    ├── timeline_v2.html（时间轴2）
-    ├── toastr_notifications.html（Toastr通知）
-    ├── tree_view.html（树形视图）
-    ├── typography.html（排版）
-    ├── webim.html（WebIM即时通讯）
-    ├── widgets.html（小部件）
-</code></pre>
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox" id="fixednavbar">
+                                        <label class="onoffswitch-label" for="fixednavbar">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setings-item">
+                                <span>
+                        固定宽度
+                    </span>
+
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox" id="boxedlayout">
+                                        <label class="onoffswitch-label" for="boxedlayout">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title">皮肤选择</div>
+                            <div class="setings-item default-skin nb">
+                                <span class="skin-name ">
+                         <a href="#" class="s-skin-0">
+                             默认皮肤
+                         </a>
+                    </span>
+                            </div>
+                            <div class="setings-item blue-skin nb">
+                                <span class="skin-name ">
+                        <a href="#" class="s-skin-1">
+                            蓝色主题
+                        </a>
+                    </span>
+                            </div>
+                            <div class="setings-item yellow-skin nb">
+                                <span class="skin-name ">
+                        <a href="#" class="s-skin-3">
+                            黄色/紫色主题
+                        </a>
+                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-comments-o"></i> 最新通知</h3>
+                            <small><i class="fa fa-tim"></i> 您当前有10条未读信息</small>
+                        </div>
+
+                        <div>
+
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+
+                                        据天津日报报道：瑞海公司董事长于学伟，副董事长董社轩等10人在13日上午已被控制。
+                                        <br>
+                                        <small class="text-muted">今天 4:21</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        HCY48之音乐大魔王会员专属皮肤已上线，快来一键换装拥有他，宣告你对华晨宇的爱吧！
+                                        <br>
+                                        <small class="text-muted">昨天 2:45</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        写的好！与您分享
+                                        <br>
+                                        <small class="text-muted">昨天 1:10</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    </div>
+
+                                    <div class="media-body">
+                                        国外极限小子的炼成！这还是亲生的吗！！
+                                        <br>
+                                        <small class="text-muted">昨天 8:37</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
+                                    </div>
+                                    <div class="media-body">
+
+                                        一只流浪狗被收留后，为了减轻主人的负担，坚持自己觅食，甚至......有些东西，可能她比我们更懂。
+                                        <br>
+                                        <small class="text-muted">今天 4:21</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        这哥们的新视频又来了，创意杠杠滴，帅炸了！
+                                        <br>
+                                        <small class="text-muted">昨天 2:45</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        最近在补追此剧，特别喜欢这段表白。
+                                        <br>
+                                        <small class="text-muted">昨天 1:10</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        我发起了一个投票 【你认为下午大盘会翻红吗？】
+                                        <br>
+                                        <small class="text-muted">星期一 8:37</small>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
 
                     </div>
-                    <div class="col-md-6">
-                        <h3>主页面的HTML元素</h3>
+                    <div id="tab-3" class="tab-pane">
 
-                        <p>框架的正常结构元素包含以下几个方面（参考index.html）：</p>
-                        <ol>
-                            <li><code>#wrapper</code> body元素之后的主容器</li>
-                            <li><code>nav .navbar-static-side</code> 左侧导航<b>菜单</b>.</li>
-                            <li><code>#page-wrapper</code> 页面内容的主容器</li>
-                            <li><code>nav .navbar-static-top</code> 顶部菜单</li>
-                            <li><code>.footer</code> 页脚主容器</li>
-                        </ol>
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-cube"></i> 最新任务</h3>
+                            <small><i class="fa fa-tim"></i> 您当前有14个任务，10个已完成</small>
+                        </div>
 
-                        <h3>iframe子页面的HTML元素</h3>
-                        <p>框架的正常子页面结构元素包含以下几个方面（参考empty_page.html）：</p>
-                        <ol>
-                            <li><code>.page-heading</code> 页面标题及包屑式导航容器</li>
-                            <li><code>.wrapper-content</code> html元素主容器</li>
-                        </ol>
+                        <ul class="sidebar-list">
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9小时以后</div>
+                                    <h4>市场调研</h4> 按要求接收教材；
 
-                        <hr>
+                                    <div class="small">已完成： 22%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">项目截止： 4:00 - 2015.10.01</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9小时以后</div>
+                                    <h4>可行性报告研究报上级批准 </h4> 编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
 
-                        <a target="_blank" href="img/page.png"><img class="img-responsive" src="img/page.png" alt="page structure">
-                        </a>
+                                    <div class="small">已完成： 48%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9小时以后</div>
+                                    <h4>立项阶段</h4> 东风商用车公司 采购综合综合查询分析系统项目进度阶段性报告武汉斯迪克科技有限公司
+
+                                    <div class="small">已完成： 14%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-primary pull-right">NEW</span>
+                                    <h4>设计阶段</h4>
+                                    <!--<div class="small pull-right m-t-xs">9小时以后</div>-->
+                                    项目进度报告(Project Progress Report)
+                                    <div class="small">已完成： 22%</div>
+                                    <div class="small text-muted m-t-xs">项目截止： 4:00 - 2015.10.01</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9小时以后</div>
+                                    <h4>拆迁阶段</h4> 科研项目研究进展报告 项目编号: 项目名称: 项目负责人:
+
+                                    <div class="small">已完成： 22%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">项目截止： 4:00 - 2015.10.01</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9小时以后</div>
+                                    <h4>建设阶段 </h4> 编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
+
+                                    <div class="small">已完成： 48%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9小时以后</div>
+                                    <h4>获证开盘</h4> 编写目的编写本项目进度报告的目的在于更好的控制软件开发的时间,对团队成员的 开发进度作出一个合理的比对
+
+                                    <div class="small">已完成： 14%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
                 </div>
-                <div class="row">
-                    <a name="layout_structure" class="anchor"></a>
-                    <div class="col-lg-12">
-                        <h3>布局结构（经典布局）</h3>
-                        <p>在所有页面的 <code>&lt;head&gt;</code> 中，应包含的meta和css等如下：</p>
-                        <pre class="prettyprint linenums">
-&lt;!DOCTYPE html>
-&lt;head>
 
-    &lt;!-- Meta --&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&lt;
-    &lt;meta name="renderer" content="webkit"&gt;
-    &lt;title&gt;H+ 后台主题UI框架 - 页面&lt;/title&gt;
+            </div>
+        </div>
+        <!--右侧边栏结束-->
+        <!--mini聊天窗口开始-->
+        <div class="small-chat-box fadeInRight animated">
 
-    &lt;!-- CSS文件 --&gt;
-    &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
-    &lt;link href="css/font-awesome.css" rel="stylesheet"&gt;
-    &lt;link href="css/animate.css" rel="stylesheet"&gt;
-    &lt;link href="css/style.css" rel="stylesheet"&gt;
+            <div class="heading" draggable="true">
+                <small class="chat-date pull-right">
+                    2015.9.1
+                </small> 与 Beau-zihan 聊天中
+            </div>
 
-&lt;/head&gt;</pre>
-                        <h3>主页</h3>
-                        <pre class="prettyprint linenums">
-&lt;body class="fixed-sidebar full-height-layout gray-bg"&gt;
-    &lt;div id="wrapper"&gt;
-        &lt;!--左侧导航开始--&gt;
-        &lt;nav class="navbar-default navbar-static-side" role="navigation"&gt;
-            &lt;div class="nav-close"&gt;&lt;i class="fa fa-times-circle"&gt;&lt;/i&gt;&lt;/div&gt;
-            &lt;div class="sidebar-collapse"&gt;
-                &lt;ul class="nav" id="side-menu"&gt;
-                    &lt;li class="nav-header"&gt;
-                        &lt;div class="dropdown profile-element"&gt;
-                            &lt;span&gt;&lt;img alt="image" class="img-circle" src="img/profile_small.jpg" /&gt;&lt;/span&gt;
-                            &lt;a data-toggle="dropdown" class="dropdown-toggle" href="#"&gt;
-                                &lt;span class="clear"&gt;
-                               &lt;span class="block m-t-xs"&gt;&lt;strong class="font-bold"&gt;Beaut-zihan&lt;/strong&gt;&lt;/span&gt;
-                                &lt;span class="text-muted text-xs block"&gt;超级管理员&lt;b class="caret"&gt;&lt;/b&gt;&lt;/span&gt;
-                                &lt;/span&gt;
-                            &lt;/a&gt;
-                            &lt;ul class="dropdown-menu animated fadeInRight m-t-xs"&gt;
-                                &lt;li&gt;&lt;a class="J_menuItem" href="form_avatar.html"&gt;修改头像&lt;/a&gt;
-                                &lt;/li&gt;
-                                ……
-                            &lt;/ul&gt;
-                        &lt;/div&gt;
-                        &lt;div class="logo-element"&gt;H+
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="#"&gt;
-                            &lt;i class="fa fa-home"&gt;&lt;/i&gt;
-                            &lt;span class="nav-label"&gt;主页&lt;/span&gt;
-                            &lt;span class="fa arrow"&gt;&lt;/span&gt;
-                        &lt;/a&gt;
-                        &lt;ul class="nav nav-second-level"&gt;
-                            &lt;li&gt;
-                                &lt;a class="J_menuItem" href="index_v1.html" data-index="0"&gt;主页示例一&lt;/a&gt;
-                                &lt;!--默认主页需在对应的菜单a元素上添加data-index="0"--&gt;
-                            &lt;/li&gt;
-                            &lt;li&gt;
-                                &lt;a class="J_menuItem" href="index_v2.html"&gt;主页示例二&lt;/a&gt;
-                            &lt;/li&gt;
-                            &lt;li&gt;
-                                &lt;a class="J_menuItem" href="index_v3.html"&gt;主页示例三&lt;/a&gt;
-                            &lt;/li&gt;
-                            ……
-                        &lt;/ul&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;!--其他菜单项--&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/nav&gt;
-        &lt;!--左侧导航结束--&gt;
-        &lt;!--右侧部分开始--&gt;
-        &lt;div id="page-wrapper" class="gray-bg dashbard-1"&gt;
-            &lt;div class="row border-bottom"&gt;
-                &lt;nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0"&gt;
-                    ……
-                &lt;/nav&gt;
-            &lt;/div&gt;
-            &lt;div class="row content-tabs"&gt;
-                &lt;button class="roll-nav roll-left J_tabLeft"&gt;&lt;i class="fa fa-angle-double-left"&gt;&lt;/i&gt;
-                &lt;/button&gt;
-                &lt;nav class="page-tabs J_menuTabs"&gt;
-                    &lt;div class="page-tabs-content"&gt;
-                        &lt;a href="javascript:;" class="active J_menuTab" data-id="index_v1.html"&gt;首页&lt;/a&gt;
-                        &lt;!--默认主页需在对应的选项卡a元素上添加data-id="默认主页的url"--&gt;
-                    &lt;/div&gt;
-                &lt;/nav&gt;
-                &lt;button class="roll-nav roll-right J_tabRight"&gt;&lt;i class="fa fa-angle-double-right"&gt;&lt;/i&gt;
-                &lt;/button&gt;
+            <div class="content">
 
-            &lt;/div&gt;
-            &lt;div class="row J_mainContent" id="content-main"&gt;
-                &lt;iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v1.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless&gt;&lt;/iframe&gt;
-                &lt;!--默认主页需在对应的页面显示iframe元素上添加name="iframe0"和data-id="默认主页的url"--&gt;
-            &lt;/div&gt;
-            &lt;div class="footer"&gt;
-                &lt;div class="pull-right"&gt;&copy; 2014-2015 &lt;a href="http://www.zi-han.net/" target="_blank"&gt;zihan's blog&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!--右侧部分结束--&gt;
-    &lt;/div&gt;
-
-    &lt;!-- 全局js --&gt;
-    &lt;script src="js/jquery.min.js?v=2.1.4"&gt;&lt;/script&gt;
-    &lt;script src="js/bootstrap.min.js?v=3.3.6"&gt;&lt;/script&gt;
-    &lt;script src="js/plugins/metisMenu/jquery.metisMenu.js"&gt;&lt;/script&gt;
-    &lt;script src="js/plugins/slimscroll/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
-    &lt;script src="js/plugins/layer/layer.min.js"&gt;&lt;/script&gt;
-
-    &lt;!-- 自定义js --&gt;
-    &lt;script src="js/hplus.js?v=4.1.0"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" src="js/contabs.js"&gt;&lt;/script&gt;
-
-    &lt;!-- 第三方插件 --&gt;
-    &lt;script src="js/plugins/pace/pace.min.js"&gt;&lt;/script&gt;
-
-&lt;/body&gt;</pre>
-                        <h3>iframe子页面</h3>
-
-                        <p>主内容包括页面顶部和页面内容</p>
-                        <pre class="prettyprint linenums">
-&lt;div class="row wrapper border-bottom white-bg page-heading"&gt;
-    &lt;div class="col-lg-9"&gt;
-        &lt;h2&gt;这里是标题&lt;/h2&gt;
-        &lt;ol class="breadcrumb"&gt;
-            &lt;li&gt;
-                &lt;a href="index.html"&gt;这是&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="active"&gt;
-                &lt;strong&gt;包屑式导航&lt;/strong&gt;
-            &lt;/li&gt;
-        &lt;/ol&gt;
-    &lt;/div&gt;
-    &lt;div class="col-lg-3"&gt;
-        &lt;div class="title-action"&gt;
-            &lt;a href="" class="btn btn-primary"&gt;活动区域&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row"&gt;
-    &lt;div class="col-lg-12"&gt;
-        &lt;div class="wrapper wrapper-content"&gt;
-
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                </pre>
-                        <b>注意：必要时在iframe子页面中需要引入js/content.js，此节可参考empty_page.html</b>
-
-                        <hr>
-                        <h3>上下式布局（可选布局）</h3>
-
-                        <p>二级菜单示例</p>
-                        <pre class="prettyprint linenums">
-&lt;nav class="navbar navbar-static-top" role="navigation"&gt;
-    &lt;div class="navbar-header"&gt;
-        &lt;button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"&gt;
-            &lt;i class="fa fa-reorder"&gt;&lt;/i&gt;
-        &lt;/button&gt;
-        &lt;a href="#" class="navbar-brand"&gt;Hplus&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="navbar-collapse collapse" id="navbar"&gt;
-        &lt;ul class="nav navbar-nav"&gt;
-            &lt;li class="active"&gt;
-                &lt;a aria-expanded="false" role="button" href="layouts.html"&gt; 返回布局页面&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class="dropdown"&gt;
-                &lt;a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; 菜单 &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul role="menu" class="dropdown-menu"&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li class="dropdown"&gt;
-                &lt;a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; 菜单 &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul role="menu" class="dropdown-menu"&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;M菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li class="dropdown"&gt;
-                &lt;a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; 菜单 &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul role="menu" class="dropdown-menu"&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li class="dropdown"&gt;
-                &lt;a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; 菜单 &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
-                &lt;ul role="menu" class="dropdown-menu"&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;&lt;a href=""&gt;菜单列表&lt;/a&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/li&gt;
-
-        &lt;/ul&gt;
-        &lt;ul class="nav navbar-top-links navbar-right"&gt;
-            &lt;li&gt;
-                &lt;a href="login.html"&gt;
-                    &lt;i class="fa fa-sign-out"&gt;&lt;/i&gt; 退出
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;
-                </pre>
-
-                        <hr>
-
-
-                        <a name="options" class="anchor"></a>
-                        <h3>设置</h3>
-
-                        <p>H+为您提供了以下几种布局方式，可以灵活引用：
-
-                            <ul>
-                                <li><a href="#fixed_navbar">固定顶部导航</a>
-                                </li>
-                                <li><a href="#rtl_support">RTL支持</a>
-                                </li>
-                                <li><a href="#layout_2">布局2</a>
-                                </li>
-                                <li><a href="#skins">模板皮肤</a>
-                                </li>
-                            </ul>
-                        </p>
-
-                        <a name="fixed_navbar" class="anchor"></a>
-                        <h4>固定顶部导航</h4>
-                        <p>
-                            固定顶部导航是指当屏幕滚动时顶部导航固定在顶部显示
-                        </p>
-                        <p>
-                            实现顶部导航固定我们需要在body元素上添加<code>.fixed-nav</code>
-                        </p>
-
-                        <pre class="prettyprint linenums">
-
-    &lt;body class="fixed-nav"&gt;
-
-</pre>
-
-                        <p>
-                            接下来我们需要修改.navbar-static-top为<code>.navbar-fixed-top</code>
-                        </p>
-
-
-                        <pre class="prettyprint linenums">
-
-&lt;nav class="navbar navbar-fixed-top" role="navigation"&gt;
-
-</pre>
-                        <a name="rtl_support" class="anchor"></a>
-                        <h4>RTL支持</h4>
-
-                        <p>
-                            RTL（从右向左阅读）
-
-                        </p>
-                        <p>
-                            添加RTL支持需要我们在所有页面的body元素（包括iframe页面）上添加<code>.rtls</code>
-                        </p>
-
-                        <pre class="prettyprint linenums">
-&lt;body class="rtls"&gt;
-</pre>
-
-                        <p>
-                            接下来我们需要在head中引入相关的支持文件
-                        </p>
-
-                        <pre class="prettyprint linenums">
-&lt;!-- Bootstrap --&gt;
-&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
-&lt;link href="css/plugins/bootstrap-rtl/bootstrap-rtl.css" rel="stylesheet"&gt;
-</pre>
-
-                        <p>
-                            添加RTL支持之后界面会变成下图所示的样子：
-
-                        </p>
-
-                        <img class="img-responsive" src="img/rtl_support.png" alt="">
-
-
-
-
-                        <a name="layout_2" class="anchor"></a>
-                        <h4>布局2</h4>
-
-                        <p>
-                            布局2是上下布局，内容居中的布局形式
-
-                        </p>
-                        <p>
-                            布局2的示例我们可以从查看index_v5.html
-                        </p>
-
-                        <p>
-                            使用布局2后的效果如下图：
-
-                        </p>
-
-                        <img class="img-responsive" src="img/index_4.png" alt="">
-
-                        <a name="skins" class="anchor"></a>
-                        <h4>模板皮肤</h4>
-
-                        <p>除默认皮肤外，H+还包含了2套皮肤可供选择</p>
-
-                        <p><strong>可以通过为元素添加不同的class实现换肤，同时您也可以制作自己的皮肤</strong>
-                        </p>
-
-                        <p>如：我们可以在body元素上添加<code>.skin-1</code></p>
-
-                        <p>在CSS文件style.css中，您可以修改这些皮肤的颜色和样式</p>
-                        <ul>
-                            <li><code>.skin-1</code> - 蓝色主题</li>
-                            <li><code>.skin-3</code> - 黄色/紫色主题</li>
-                            <li>默认皮肤不需要添加任何class</li>
-                        </ul>
-                        <b>v3.0中移除了.skin-2（灰色皮肤）</b>
-
-                        <a name="themeconfig" class="anchor"></a>
-                        <h4>主题设置</h4>
-
-                        <p>主题设置是一个实时预览主题改变效果的设置框，它放在主题的右上角的位置（点击齿轮图标可以展开和收起）</p>
-
-                        <p>如果您在本地测试时看不到主题设置框，建议您放到localhost下面</p>
-
-                        <p>我们没有直接在页面中添加主题设置的html代码，而是通过在hplus.js文件中添加了对应的函数来实现，您可以通过查找“// //主题设置”注释来查看对应代码</p>
-
-                        <p>如果您需要移除主题设置框，只需要注释或移除对应的代码即可</p>
-
-                        <a name="change_log" class="anchor"></a>
-
-                        <h3>如何从v3.x升级到v4.1.0</h3>
-
-                        <p>直接覆盖即可。</strong>
-                        </p>
-                        <a name="links" class="anchor"></a>
-                        <h3>相关参考文档</h3>
-                        <p>H+基于Bootstrap，所以您可以参考以下文档：
-                        </p>
-                        <ol>
-                            <li>Bootstrap中文文档：<a href="http://v3.bootcss.com/getting-started/" target="_blank">http://v3.bootcss.com/getting-started/</a></li>
-                            <li>Bootstrap官方文档：<a href="http://getbootstrap.com/getting-started/" target="_blank">http://getbootstrap.com/getting-started/</a></li>
-                        </ol>
-                        <p>H+集成了很多国内外优秀的第三方插件，对于这些插件，暂时没有整理文档，因为我相信再怎么整理，都不如插件官方的文档权威，但是基本上都提供了官方的链接，请各位同学根据需要自行百度，备梯和参考官方文档。另外关于集成的插件，请多看看官方文档，不建议照着demo一试，不行，就找我，一般情况下，我不负责解决由于各种不注意，不细心，不学习所引起的插件使用问题。
-                        </p>
-                        <hr>
-
-                        <a name="contact" class="anchor"></a>
-                        <h3>付费二次开发服务</h3>
-                        <p>如果需要二次的付费开发服务，加QQ：516477188
-                        </p>
-                        <hr>
+                <div class="left">
+                    <div class="author-name">
+                        Beau-zihan <small class="chat-date">
+                        10:02
+                    </small>
                     </div>
+                    <div class="chat-message active">
+                        你好
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="author-name">
+                        游客
+                        <small class="chat-date">
+                            11:24
+                        </small>
+                    </div>
+                    <div class="chat-message">
+                        你好，请问H+有帮助文档吗？
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        Beau-zihan
+                        <small class="chat-date">
+                            08:45
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        有，购买的H+源码包中有帮助文档，位于docs文件夹下
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="author-name">
+                        游客
+                        <small class="chat-date">
+                            11:24
+                        </small>
+                    </div>
+                    <div class="chat-message">
+                        那除了帮助文档还提供什么样的服务？
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        Beau-zihan
+                        <small class="chat-date">
+                            08:45
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        1.所有源码(未压缩、带注释版本)；
+                        <br> 2.说明文档；
+                        <br> 3.终身免费升级服务；
+                        <br> 4.必要的技术支持；
+                        <br> 5.付费二次开发服务；
+                        <br> 6.授权许可；
+                        <br> ……
+                        <br>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-chat">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control"> <span class="input-group-btn"> <button
+                        class="btn btn-primary" type="button">发送
+                </button> </span>
                 </div>
             </div>
 
-            <footer>
-                <p>&copy; Hplus</p>
-            </footer>
         </div>
+        <div id="small-chat">
+            <span class="badge badge-warning pull-right">5</span>
+            <a class="open-small-chat">
+                <i class="fa fa-comments"></i>
+
+            </a>
+        </div>
+        <!--mini聊天窗口结束-->
     </div>
 
-    <script src="../js/jquery.min.js?v=2.1.4"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="js/prettify.js"></script>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
 
-    <script>
-        $(function () {
-            window.prettyPrint && prettyPrint();
-        })
-    </script>
+    <!-- 自定义js -->
+    <script src="js/hplus.js?v=4.1.0"></script>
+    <script type="text/javascript" src="js/contabs.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
 
 </body>
 
